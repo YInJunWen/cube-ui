@@ -162,6 +162,15 @@
           this._play()
         }
       },
+      play() {
+        if (this._timer === null) {
+          this._play()
+        }
+      },
+      pause() {
+        clearTimeout(this._timer)
+        this._timer = null
+      },
       _destroy() {
         this.slide && this.slide.destroy()
       },

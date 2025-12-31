@@ -36,6 +36,10 @@
                           @update:value="updateInterval"></input-option>
           </div>
           <div class="group">
+            <switch-option class="item" name="play" :value="play"
+                           @update:value="updatePlay"></switch-option>
+          </div>
+          <div class="group">
             <input-option class="item" name="Threshold" :value="threshold"
                           @update:value="updateThreshold"></input-option>
           </div>
@@ -84,6 +88,7 @@
         ],
         loop: true,
         autoPlay: true,
+        play: true,
         interval: 4000,
         threshold: 0.3,
         speed: 400,
@@ -127,6 +132,14 @@
       },
       updateAutoPlay(val) {
         this.autoPlay = val
+      },
+      updatePlay(val) {
+        this.play = val
+        if (val) {
+          this.$refs.slide.play()
+        } else {
+          this.$refs.slide.pause()
+        }
       },
       updateInterval(val) {
         val = +val
