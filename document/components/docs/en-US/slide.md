@@ -215,3 +215,5 @@
 | Method name | Description |
 | - | - |
 | refresh | You can call this method when slide items added or removed |
+| play | You can call this method to play slide |
+| pause | You can call this method to pause slide |
