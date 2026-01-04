@@ -162,6 +162,19 @@
           this._play()
         }
       },
+      play() {
+        /* 基于 autoPlay 为true 时，调用 play 方法生效 */
+        if (!this.autoPlay) return
+        if (this._timer === null) {
+          this._play()
+        }
+      },
+      pause() {
+        /* 基于 autoPlay 为true 时，调用 pause 方法生效 */
+        if (!this.autoPlay) return
+        clearTimeout(this._timer)
+        this._timer = null
+      },
       _destroy() {
         this.slide && this.slide.destroy()
       },

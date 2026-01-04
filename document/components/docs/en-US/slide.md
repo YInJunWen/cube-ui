@@ -215,3 +215,5 @@
 | Method name | Description |
 | - | - |
 | refresh | You can call this method when slide items added or removed |
+| play<sup>1.12.56</sup> | You can call this method to start auto play after pausing. **Note: It will only work when `autoPlay` is `true`.** |
+| pause<sup>1.12.56</sup> | You can call this method to pause slide automatically. **Note: It will only work when `autoPlay` is `true`.** |
